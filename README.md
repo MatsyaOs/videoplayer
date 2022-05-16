@@ -1,5 +1,5 @@
 # Matsya Video Player
-
+![github image](https://github.com/MatsyaOs/videoplayer/blob/main/MatsyaVideoplayer.png "MATSYA Video Player")
 An open source video player built with Qt/QML and libmpv.
 
 ### Third Party Code
