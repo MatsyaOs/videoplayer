@@ -67,10 +67,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tokyo/clone/cuteclone/videoplayer
+CMAKE_SOURCE_DIR = /home/tokyo/Documents/GitHub/videoplayer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tokyo/clone/cuteclone/videoplayer/build
+CMAKE_BINARY_DIR = /home/tokyo/Documents/GitHub/videoplayer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,6 +98,17 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -132,22 +143,11 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tokyo/clone/cuteclone/videoplayer/build/CMakeFiles /home/tokyo/clone/cuteclone/videoplayer/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles /home/tokyo/Documents/GitHub/videoplayer/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tokyo/clone/cuteclone/videoplayer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -189,84 +189,84 @@ translations/fast:
 .PHONY : translations/fast
 
 #=============================================================================
-# Target rules for targets named cutefish-videoplayer
+# Target rules for targets named matsya-videoplayer
 
 # Build rule for target.
-cutefish-videoplayer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cutefish-videoplayer
-.PHONY : cutefish-videoplayer
+matsya-videoplayer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matsya-videoplayer
+.PHONY : matsya-videoplayer
 
 # fast build rule for target.
-cutefish-videoplayer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/build
-.PHONY : cutefish-videoplayer/fast
+matsya-videoplayer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/build
+.PHONY : matsya-videoplayer/fast
 
 #=============================================================================
-# Target rules for targets named cutefish-videoplayer_autogen
+# Target rules for targets named matsya-videoplayer_autogen
 
 # Build rule for target.
-cutefish-videoplayer_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cutefish-videoplayer_autogen
-.PHONY : cutefish-videoplayer_autogen
+matsya-videoplayer_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matsya-videoplayer_autogen
+.PHONY : matsya-videoplayer_autogen
 
 # fast build rule for target.
-cutefish-videoplayer_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer_autogen.dir/build.make CMakeFiles/cutefish-videoplayer_autogen.dir/build
-.PHONY : cutefish-videoplayer_autogen/fast
+matsya-videoplayer_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer_autogen.dir/build.make CMakeFiles/matsya-videoplayer_autogen.dir/build
+.PHONY : matsya-videoplayer_autogen/fast
 
-cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.o: cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o
+matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.o: matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o
 
-.PHONY : cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.o
-
-# target to build an object file
-cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o
-.PHONY : cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o
-
-cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.i: cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i
-
-.PHONY : cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.i
-
-# target to preprocess a source file
-cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i
-.PHONY : cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i
-
-cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.s: cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s
-
-.PHONY : cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.s
-
-# target to generate assembly for a file
-cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s
-.PHONY : cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s
-
-cutefish-videoplayer_autogen/mocs_compilation.o: cutefish-videoplayer_autogen/mocs_compilation.cpp.o
-
-.PHONY : cutefish-videoplayer_autogen/mocs_compilation.o
+.PHONY : matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.o
 
 # target to build an object file
-cutefish-videoplayer_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/cutefish-videoplayer_autogen/mocs_compilation.cpp.o
-.PHONY : cutefish-videoplayer_autogen/mocs_compilation.cpp.o
+matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o
+.PHONY : matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.o
 
-cutefish-videoplayer_autogen/mocs_compilation.i: cutefish-videoplayer_autogen/mocs_compilation.cpp.i
+matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.i: matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i
 
-.PHONY : cutefish-videoplayer_autogen/mocs_compilation.i
+.PHONY : matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.i
 
 # target to preprocess a source file
-cutefish-videoplayer_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/cutefish-videoplayer_autogen/mocs_compilation.cpp.i
-.PHONY : cutefish-videoplayer_autogen/mocs_compilation.cpp.i
+matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i
+.PHONY : matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.i
 
-cutefish-videoplayer_autogen/mocs_compilation.s: cutefish-videoplayer_autogen/mocs_compilation.cpp.s
+matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.s: matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s
 
-.PHONY : cutefish-videoplayer_autogen/mocs_compilation.s
+.PHONY : matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.s
 
 # target to generate assembly for a file
-cutefish-videoplayer_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/cutefish-videoplayer_autogen/mocs_compilation.cpp.s
-.PHONY : cutefish-videoplayer_autogen/mocs_compilation.cpp.s
+matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s
+.PHONY : matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp.s
+
+matsya-videoplayer_autogen/mocs_compilation.o: matsya-videoplayer_autogen/mocs_compilation.cpp.o
+
+.PHONY : matsya-videoplayer_autogen/mocs_compilation.o
+
+# target to build an object file
+matsya-videoplayer_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/matsya-videoplayer_autogen/mocs_compilation.cpp.o
+.PHONY : matsya-videoplayer_autogen/mocs_compilation.cpp.o
+
+matsya-videoplayer_autogen/mocs_compilation.i: matsya-videoplayer_autogen/mocs_compilation.cpp.i
+
+.PHONY : matsya-videoplayer_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+matsya-videoplayer_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/matsya-videoplayer_autogen/mocs_compilation.cpp.i
+.PHONY : matsya-videoplayer_autogen/mocs_compilation.cpp.i
+
+matsya-videoplayer_autogen/mocs_compilation.s: matsya-videoplayer_autogen/mocs_compilation.cpp.s
+
+.PHONY : matsya-videoplayer_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+matsya-videoplayer_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/matsya-videoplayer_autogen/mocs_compilation.cpp.s
+.PHONY : matsya-videoplayer_autogen/mocs_compilation.cpp.s
 
 screensaverdbusinterface.o: screensaverdbusinterface.cpp.o
 
@@ -274,7 +274,7 @@ screensaverdbusinterface.o: screensaverdbusinterface.cpp.o
 
 # target to build an object file
 screensaverdbusinterface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/screensaverdbusinterface.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/screensaverdbusinterface.cpp.o
 .PHONY : screensaverdbusinterface.cpp.o
 
 screensaverdbusinterface.i: screensaverdbusinterface.cpp.i
@@ -283,7 +283,7 @@ screensaverdbusinterface.i: screensaverdbusinterface.cpp.i
 
 # target to preprocess a source file
 screensaverdbusinterface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/screensaverdbusinterface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/screensaverdbusinterface.cpp.i
 .PHONY : screensaverdbusinterface.cpp.i
 
 screensaverdbusinterface.s: screensaverdbusinterface.cpp.s
@@ -292,7 +292,7 @@ screensaverdbusinterface.s: screensaverdbusinterface.cpp.s
 
 # target to generate assembly for a file
 screensaverdbusinterface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/screensaverdbusinterface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/screensaverdbusinterface.cpp.s
 .PHONY : screensaverdbusinterface.cpp.s
 
 src/application.o: src/application.cpp.o
@@ -301,7 +301,7 @@ src/application.o: src/application.cpp.o
 
 # target to build an object file
 src/application.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/application.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/application.cpp.o
 .PHONY : src/application.cpp.o
 
 src/application.i: src/application.cpp.i
@@ -310,7 +310,7 @@ src/application.i: src/application.cpp.i
 
 # target to preprocess a source file
 src/application.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/application.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/application.cpp.i
 .PHONY : src/application.cpp.i
 
 src/application.s: src/application.cpp.s
@@ -319,7 +319,7 @@ src/application.s: src/application.cpp.s
 
 # target to generate assembly for a file
 src/application.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/application.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/application.cpp.s
 .PHONY : src/application.cpp.s
 
 src/lockmanager.o: src/lockmanager.cpp.o
@@ -328,7 +328,7 @@ src/lockmanager.o: src/lockmanager.cpp.o
 
 # target to build an object file
 src/lockmanager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/lockmanager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/lockmanager.cpp.o
 .PHONY : src/lockmanager.cpp.o
 
 src/lockmanager.i: src/lockmanager.cpp.i
@@ -337,7 +337,7 @@ src/lockmanager.i: src/lockmanager.cpp.i
 
 # target to preprocess a source file
 src/lockmanager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/lockmanager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/lockmanager.cpp.i
 .PHONY : src/lockmanager.cpp.i
 
 src/lockmanager.s: src/lockmanager.cpp.s
@@ -346,7 +346,7 @@ src/lockmanager.s: src/lockmanager.cpp.s
 
 # target to generate assembly for a file
 src/lockmanager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/lockmanager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/lockmanager.cpp.s
 .PHONY : src/lockmanager.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -355,7 +355,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -364,7 +364,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -373,7 +373,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/mpris2/mediaplayer2.o: src/mpris2/mediaplayer2.cpp.o
@@ -382,7 +382,7 @@ src/mpris2/mediaplayer2.o: src/mpris2/mediaplayer2.cpp.o
 
 # target to build an object file
 src/mpris2/mediaplayer2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpris2/mediaplayer2.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpris2/mediaplayer2.cpp.o
 .PHONY : src/mpris2/mediaplayer2.cpp.o
 
 src/mpris2/mediaplayer2.i: src/mpris2/mediaplayer2.cpp.i
@@ -391,7 +391,7 @@ src/mpris2/mediaplayer2.i: src/mpris2/mediaplayer2.cpp.i
 
 # target to preprocess a source file
 src/mpris2/mediaplayer2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpris2/mediaplayer2.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpris2/mediaplayer2.cpp.i
 .PHONY : src/mpris2/mediaplayer2.cpp.i
 
 src/mpris2/mediaplayer2.s: src/mpris2/mediaplayer2.cpp.s
@@ -400,7 +400,7 @@ src/mpris2/mediaplayer2.s: src/mpris2/mediaplayer2.cpp.s
 
 # target to generate assembly for a file
 src/mpris2/mediaplayer2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpris2/mediaplayer2.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpris2/mediaplayer2.cpp.s
 .PHONY : src/mpris2/mediaplayer2.cpp.s
 
 src/mpris2/mediaplayer2player.o: src/mpris2/mediaplayer2player.cpp.o
@@ -409,7 +409,7 @@ src/mpris2/mediaplayer2player.o: src/mpris2/mediaplayer2player.cpp.o
 
 # target to build an object file
 src/mpris2/mediaplayer2player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpris2/mediaplayer2player.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpris2/mediaplayer2player.cpp.o
 .PHONY : src/mpris2/mediaplayer2player.cpp.o
 
 src/mpris2/mediaplayer2player.i: src/mpris2/mediaplayer2player.cpp.i
@@ -418,7 +418,7 @@ src/mpris2/mediaplayer2player.i: src/mpris2/mediaplayer2player.cpp.i
 
 # target to preprocess a source file
 src/mpris2/mediaplayer2player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpris2/mediaplayer2player.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpris2/mediaplayer2player.cpp.i
 .PHONY : src/mpris2/mediaplayer2player.cpp.i
 
 src/mpris2/mediaplayer2player.s: src/mpris2/mediaplayer2player.cpp.s
@@ -427,7 +427,7 @@ src/mpris2/mediaplayer2player.s: src/mpris2/mediaplayer2player.cpp.s
 
 # target to generate assembly for a file
 src/mpris2/mediaplayer2player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpris2/mediaplayer2player.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpris2/mediaplayer2player.cpp.s
 .PHONY : src/mpris2/mediaplayer2player.cpp.s
 
 src/mpvobject.o: src/mpvobject.cpp.o
@@ -436,7 +436,7 @@ src/mpvobject.o: src/mpvobject.cpp.o
 
 # target to build an object file
 src/mpvobject.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpvobject.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpvobject.cpp.o
 .PHONY : src/mpvobject.cpp.o
 
 src/mpvobject.i: src/mpvobject.cpp.i
@@ -445,7 +445,7 @@ src/mpvobject.i: src/mpvobject.cpp.i
 
 # target to preprocess a source file
 src/mpvobject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpvobject.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpvobject.cpp.i
 .PHONY : src/mpvobject.cpp.i
 
 src/mpvobject.s: src/mpvobject.cpp.s
@@ -454,7 +454,7 @@ src/mpvobject.s: src/mpvobject.cpp.s
 
 # target to generate assembly for a file
 src/mpvobject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/mpvobject.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/mpvobject.cpp.s
 .PHONY : src/mpvobject.cpp.s
 
 src/playlistitem.o: src/playlistitem.cpp.o
@@ -463,7 +463,7 @@ src/playlistitem.o: src/playlistitem.cpp.o
 
 # target to build an object file
 src/playlistitem.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/playlistitem.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/playlistitem.cpp.o
 .PHONY : src/playlistitem.cpp.o
 
 src/playlistitem.i: src/playlistitem.cpp.i
@@ -472,7 +472,7 @@ src/playlistitem.i: src/playlistitem.cpp.i
 
 # target to preprocess a source file
 src/playlistitem.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/playlistitem.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/playlistitem.cpp.i
 .PHONY : src/playlistitem.cpp.i
 
 src/playlistitem.s: src/playlistitem.cpp.s
@@ -481,7 +481,7 @@ src/playlistitem.s: src/playlistitem.cpp.s
 
 # target to generate assembly for a file
 src/playlistitem.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/playlistitem.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/playlistitem.cpp.s
 .PHONY : src/playlistitem.cpp.s
 
 src/playlistmodel.o: src/playlistmodel.cpp.o
@@ -490,7 +490,7 @@ src/playlistmodel.o: src/playlistmodel.cpp.o
 
 # target to build an object file
 src/playlistmodel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/playlistmodel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/playlistmodel.cpp.o
 .PHONY : src/playlistmodel.cpp.o
 
 src/playlistmodel.i: src/playlistmodel.cpp.i
@@ -499,7 +499,7 @@ src/playlistmodel.i: src/playlistmodel.cpp.i
 
 # target to preprocess a source file
 src/playlistmodel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/playlistmodel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/playlistmodel.cpp.i
 .PHONY : src/playlistmodel.cpp.i
 
 src/playlistmodel.s: src/playlistmodel.cpp.s
@@ -508,7 +508,7 @@ src/playlistmodel.s: src/playlistmodel.cpp.s
 
 # target to generate assembly for a file
 src/playlistmodel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/playlistmodel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/playlistmodel.cpp.s
 .PHONY : src/playlistmodel.cpp.s
 
 src/track.o: src/track.cpp.o
@@ -517,7 +517,7 @@ src/track.o: src/track.cpp.o
 
 # target to build an object file
 src/track.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/track.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/track.cpp.o
 .PHONY : src/track.cpp.o
 
 src/track.i: src/track.cpp.i
@@ -526,7 +526,7 @@ src/track.i: src/track.cpp.i
 
 # target to preprocess a source file
 src/track.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/track.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/track.cpp.i
 .PHONY : src/track.cpp.i
 
 src/track.s: src/track.cpp.s
@@ -535,7 +535,7 @@ src/track.s: src/track.cpp.s
 
 # target to generate assembly for a file
 src/track.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/track.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/track.cpp.s
 .PHONY : src/track.cpp.s
 
 src/tracksmodel.o: src/tracksmodel.cpp.o
@@ -544,7 +544,7 @@ src/tracksmodel.o: src/tracksmodel.cpp.o
 
 # target to build an object file
 src/tracksmodel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/tracksmodel.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/tracksmodel.cpp.o
 .PHONY : src/tracksmodel.cpp.o
 
 src/tracksmodel.i: src/tracksmodel.cpp.i
@@ -553,7 +553,7 @@ src/tracksmodel.i: src/tracksmodel.cpp.i
 
 # target to preprocess a source file
 src/tracksmodel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/tracksmodel.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/tracksmodel.cpp.i
 .PHONY : src/tracksmodel.cpp.i
 
 src/tracksmodel.s: src/tracksmodel.cpp.s
@@ -562,7 +562,7 @@ src/tracksmodel.s: src/tracksmodel.cpp.s
 
 # target to generate assembly for a file
 src/tracksmodel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cutefish-videoplayer.dir/build.make CMakeFiles/cutefish-videoplayer.dir/src/tracksmodel.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matsya-videoplayer.dir/build.make CMakeFiles/matsya-videoplayer.dir/src/tracksmodel.cpp.s
 .PHONY : src/tracksmodel.cpp.s
 
 # Help Target
@@ -577,15 +577,15 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... cutefish-videoplayer_autogen"
+	@echo "... matsya-videoplayer_autogen"
 	@echo "... translations"
-	@echo "... cutefish-videoplayer"
-	@echo "... cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.o"
-	@echo "... cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.i"
-	@echo "... cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.s"
-	@echo "... cutefish-videoplayer_autogen/mocs_compilation.o"
-	@echo "... cutefish-videoplayer_autogen/mocs_compilation.i"
-	@echo "... cutefish-videoplayer_autogen/mocs_compilation.s"
+	@echo "... matsya-videoplayer"
+	@echo "... matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.o"
+	@echo "... matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.i"
+	@echo "... matsya-videoplayer_autogen/EWIEGA46WW/qrc_qml.s"
+	@echo "... matsya-videoplayer_autogen/mocs_compilation.o"
+	@echo "... matsya-videoplayer_autogen/mocs_compilation.i"
+	@echo "... matsya-videoplayer_autogen/mocs_compilation.s"
 	@echo "... screensaverdbusinterface.o"
 	@echo "... screensaverdbusinterface.i"
 	@echo "... screensaverdbusinterface.s"
