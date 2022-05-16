@@ -9,7 +9,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
 
-import FishUI 1.0 as FishUI
+import MatsyaUI 1.0 as MatsyaUI
 
 Item {
     id: root
@@ -25,7 +25,7 @@ Item {
 
     Rectangle {
         anchors.fill: parent
-        color: FishUI.Theme.backgroundColor
+        color: MatsyaUI.Theme.backgroundColor
         opacity: 0.5
     }
 
@@ -60,16 +60,16 @@ Item {
 
     RowLayout {
         anchors.fill: parent
-        spacing: FishUI.Units.largeSpacing
+        spacing: MatsyaUI.Units.largeSpacing
 
         Label {
             text: pad(root.rowNumber, playlistView.count.toString().length)
             visible: true
             font.pointSize: (rootWindow.isFullScreen() && playList.bigFont)
-                            ? FishUI.Units.gridUnit
-                            : FishUI.Units.gridUnit - 6
+                            ? MatsyaUI.Units.gridUnit
+                            : MatsyaUI.Units.gridUnit - 6
             horizontalAlignment: Qt.AlignCenter
-            Layout.leftMargin: FishUI.Units.largeSpacing
+            Layout.leftMargin: MatsyaUI.Units.largeSpacing
 
             function pad(number, length) {
                 while (number.length < length)
@@ -85,24 +85,24 @@ Item {
             verticalAlignment: Qt.AlignVCenter
             elide: Text.ElideRight
             font.pointSize: (rootWindow.isFullScreen() && playList.bigFont)
-                            ? FishUI.Units.gridUnit
-                            : FishUI.Units.gridUnit - 6
+                            ? MatsyaUI.Units.gridUnit
+                            : MatsyaUI.Units.gridUnit - 6
             font.weight: Font.Normal
-            color: isPlaying ? FishUI.Theme.highlightColor : FishUI.Theme.textColor
+            color: isPlaying ? MatsyaUI.Theme.highlightColor : MatsyaUI.Theme.textColor
             text: model.name
             layer.enabled: true
             Layout.fillWidth: true
-            // Layout.leftMargin: PlaylistSettings.showRowNumber || isPlaying ? 0 : FishUI.Units.largeSpacing
+            // Layout.leftMargin: PlaylistSettings.showRowNumber || isPlaying ? 0 : MatsyaUI.Units.largeSpacing
         }
 
         Label {
             text: model.duration
             visible: model.duration.length > 0
             font.pointSize: (rootWindow.isFullScreen() && playList.bigFont)
-                            ? FishUI.Units.gridUnit
-                            : FishUI.Units.gridUnit - 6
+                            ? MatsyaUI.Units.gridUnit
+                            : MatsyaUI.Units.gridUnit - 6
             horizontalAlignment: Qt.AlignCenter
-            Layout.margins: FishUI.Units.largeSpacing
+            Layout.margins: MatsyaUI.Units.largeSpacing
         }
     }
 

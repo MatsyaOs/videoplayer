@@ -10,16 +10,16 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
 
-import FishUI 1.0 as FishUI
+import MatsyaUI 1.0 as MatsyaUI
 import mpv 1.0
 
 Item {
     id: control
-    height: mpv.height - FishUI.Units.largeSpacing * 2
-    width: FishUI.Units.gridUnit * 16
+    height: mpv.height - MatsyaUI.Units.largeSpacing * 2
+    width: MatsyaUI.Units.gridUnit * 16
     z: 9999
     x: parent.width
-    y: FishUI.Units.largeSpacing
+    y: MatsyaUI.Units.largeSpacing
     state: "hidden"
 
     property string position: "right"
@@ -80,7 +80,7 @@ Item {
 
      Rectangle {
          anchors.fill: parent
-         color: FishUI.Theme.backgroundColor
+         color: MatsyaUI.Theme.backgroundColor
          opacity: 0.7
      }
 
@@ -92,7 +92,7 @@ Item {
          },
          State {
              name : "visible"
-             PropertyChanges { target: control; x: position === "right" ? parent.width - control.width - FishUI.Units.largeSpacing : 0 }
+             PropertyChanges { target: control; x: position === "right" ? parent.width - control.width - MatsyaUI.Units.largeSpacing : 0 }
              PropertyChanges { target: control; visible: true }
          }
      ]
@@ -144,7 +144,7 @@ Item {
 
              Rectangle {
                  anchors.fill: parent
-                 radius: FishUI.Theme.bigRadius
+                 radius: MatsyaUI.Theme.bigRadius
              }
          }
      }

@@ -1,4 +1,4 @@
-# Cutefish Video Player
+# Matsya Video Player
 
 An open source video player built with Qt/QML and libmpv.
 

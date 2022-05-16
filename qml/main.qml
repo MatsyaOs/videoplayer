@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2021 Reion Wong <reion@cutefishos.com>
+ * SPDX-FileCopyrightText: 2021 Reion Wong <reion@matsyaos.com>
  * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
@@ -12,19 +12,19 @@ import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
 import Qt.labs.platform 1.0 as Platform
 
-import FishUI 1.0 as FishUI
+import MatsyaUI 1.0 as MatsyaUI
 import mpv 1.0
 
-FishUI.Window {
+MatsyaUI.Window {
     id: rootWindow
     width: 720
     height: 480
     minimumWidth: 700
     minimumHeight: 450
-    color: FishUI.Theme.backgroundColor
+    color: MatsyaUI.Theme.backgroundColor
 
     header.visible: !rootWindow.isFullScreen()
-    headerBackground.color: FishUI.Theme.secondBackgroundColor
+    headerBackground.color: MatsyaUI.Theme.secondBackgroundColor
     // headerBackground.opacity: 0.95
 
     contentTopMargin: header.visible ? header.height : 0
@@ -50,11 +50,11 @@ FishUI.Window {
             id: headerLabel
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: FishUI.Units.smallSpacing * 1.5
-            anchors.leftMargin: FishUI.Units.largeSpacing
+            anchors.topMargin: MatsyaUI.Units.smallSpacing * 1.5
+            anchors.leftMargin: MatsyaUI.Units.largeSpacing
             text: mpv.mediaTitle ? mpv.mediaTitle : qsTr("Video Player")
 //            color: "white"
-            color: FishUI.Theme.textColor
+            color: MatsyaUI.Theme.textColor
             z: 100
         }
 
@@ -64,7 +64,7 @@ FishUI.Window {
 //            z: -1
 //            horizontalOffset: 1
 //            verticalOffset: 1
-//            radius: Math.round(6 * FishUI.Units.devicePixelRatio)
+//            radius: Math.round(6 * MatsyaUI.Units.devicePixelRatio)
 //            samples: radius * 2 + 1
 //            spread: 0.35
 //            color: Qt.rgba(0, 0, 0, 0.5)
@@ -89,7 +89,7 @@ FishUI.Window {
             anchors.centerIn: parent
             width: 128
             height: 128
-            source: "qrc:/images/cutefish-videoplayer.svg"
+            source: "qrc:/images/matsya-videoplayer.svg"
             sourceSize: Qt.size(width, height)
             visible: playList.playlistView.count === 0
         }
@@ -97,7 +97,7 @@ FishUI.Window {
         Button {
             visible: _logo.visible
             anchors.top: _logo.bottom
-            anchors.topMargin: FishUI.Units.largeSpacing
+            anchors.topMargin: MatsyaUI.Units.largeSpacing
             anchors.horizontalCenter: parent.horizontalCenter
             text: qsTr("Open")
             onClicked: fileDialog.open()

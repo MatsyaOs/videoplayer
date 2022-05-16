@@ -9,7 +9,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.12
 
-import FishUI 1.0 as FishUI
+import MatsyaUI 1.0 as MatsyaUI
 
 Item {
     id: control
@@ -19,7 +19,7 @@ Item {
     property alias timeInfo: timeInfo
     property alias volume: volume
 
-    height: mainLayout.childrenRect.height + FishUI.Units.smallSpacing
+    height: mainLayout.childrenRect.height + MatsyaUI.Units.smallSpacing
     enabled: opacity !== 0
     // visible: mpv.mouseY > rootWindow.height - footer.height && playList.state === "hidden"
 
@@ -44,7 +44,7 @@ Item {
     Rectangle {
         id: _background
         anchors.fill: parent
-        color: FishUI.Theme.secondBackgroundColor
+        color: MatsyaUI.Theme.secondBackgroundColor
         opacity: 0.7
     }
 
@@ -52,8 +52,8 @@ Item {
         id: mainLayout
         anchors.fill: parent
         anchors.topMargin: 0
-        anchors.bottomMargin: FishUI.Units.smallSpacing
-        spacing: FishUI.Units.smallSpacing
+        anchors.bottomMargin: MatsyaUI.Units.smallSpacing
+        spacing: MatsyaUI.Units.smallSpacing
 
         HProgressBar {
             id: progressBar
@@ -65,7 +65,7 @@ Item {
             id: footerRow
 
             Item {
-                width: FishUI.Units.smallSpacing
+                width: MatsyaUI.Units.smallSpacing
                 height: 40
             }
 
@@ -96,29 +96,29 @@ Item {
                     id: middleLayout
                     anchors.fill: parent
 
-                    FishUI.RoundImageButton {
+                    MatsyaUI.RoundImageButton {
                         width: 32
                         height: 32
-                        iconMargins: FishUI.Units.smallSpacing
-                        source: "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/media-skip-backward-symbolic.svg"
+                        iconMargins: MatsyaUI.Units.smallSpacing
+                        source: "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/media-skip-backward-symbolic.svg"
                         onClicked: actions.playPauseAction.triggered()
                         visible: playList.playlistView.count > 1
                     }
 
-                    FishUI.RoundImageButton {
+                    MatsyaUI.RoundImageButton {
                         width: 32
                         height: 32
-                        iconMargins: FishUI.Units.smallSpacing
-                        source: mpv.pause ? "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/media-playback-start-symbolic.svg"
-                                          : "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/media-playback-pause-symbolic.svg"
+                        iconMargins: MatsyaUI.Units.smallSpacing
+                        source: mpv.pause ? "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/media-playback-start-symbolic.svg"
+                                          : "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/media-playback-pause-symbolic.svg"
                         onClicked: actions.playPauseAction.triggered()
                     }
 
-                    FishUI.RoundImageButton {
+                    MatsyaUI.RoundImageButton {
                         width: 32
                         height: 32
-                        iconMargins: FishUI.Units.smallSpacing
-                        source: "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/media-skip-forward-symbolic.svg"
+                        iconMargins: MatsyaUI.Units.smallSpacing
+                        source: "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/media-skip-forward-symbolic.svg"
                         onClicked: actions.playPauseAction.triggered()
                         visible: playList.playlistView.count > 1
                     }
@@ -156,25 +156,25 @@ Item {
 
                 RowLayout {
                     anchors.fill: parent
-                    spacing: FishUI.Units.smallSpacing
+                    spacing: MatsyaUI.Units.smallSpacing
 
                     Item {
                         Layout.fillWidth: true
                     }
 
-                    FishUI.RoundImageButton {
+                    MatsyaUI.RoundImageButton {
                         id: mute
                         width: 32
                         height: 32
-                        iconMargins: FishUI.Units.smallSpacing + 3
-                        source: mpv.getProperty("mute") ? "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-muted-symbolic.svg"
-                                                        : "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-high-symbolic.svg"
+                        iconMargins: MatsyaUI.Units.smallSpacing + 3
+                        source: mpv.getProperty("mute") ? "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-muted-symbolic.svg"
+                                                        : "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-high-symbolic.svg"
                         onClicked: {
                             mpv.setProperty("mute", !mpv.getProperty("mute"))
                             if (mpv.getProperty("mute")) {
-                                mute.source = "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-muted-symbolic.svg"
+                                mute.source = "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-muted-symbolic.svg"
                             } else {
-                                mute.source = "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-high-symbolic.svg"
+                                mute.source = "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/audio-volume-high-symbolic.svg"
                             }
                         }
                     }
@@ -200,16 +200,16 @@ Item {
                         width: 1
                     }
 
-                    FishUI.RoundImageButton {
+                    MatsyaUI.RoundImageButton {
                         width: 32
                         height: 32
-                        iconMargins: FishUI.Units.smallSpacing + 2
-                        source: "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/list.svg"
+                        iconMargins: MatsyaUI.Units.smallSpacing + 2
+                        source: "qrc:/images/" + (MatsyaUI.Theme.darkMode ? "dark" : "light") + "/list.svg"
                         onClicked: actions.togglePlaylistAction.triggered()
                     }
 
                     Item {
-                        width: FishUI.Units.smallSpacing
+                        width: MatsyaUI.Units.smallSpacing
                     }
                 }
             }

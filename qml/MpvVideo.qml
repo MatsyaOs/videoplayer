@@ -6,7 +6,7 @@
 
 import QtQuick 2.12
 import QtQuick.Window 2.12
-import FishUI 1.0 as FishUI
+import MatsyaUI 1.0 as MatsyaUI
 import mpv 1.0
 
 MpvObject {

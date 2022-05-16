@@ -11,7 +11,7 @@ import QtQuick.Layouts 1.12
 import QtQuick.Shapes 1.12
 import QtGraphicalEffects 1.0
 
-import FishUI 1.0 as FishUI
+import MatsyaUI 1.0 as MatsyaUI
 
 Slider {
     id: root
@@ -31,7 +31,7 @@ Slider {
 
     background: Rectangle {
         id: progressBarBackground
-        color: FishUI.Theme.darkMode ? "#3E3E40" : "#E6E6E6"
+        color: MatsyaUI.Theme.darkMode ? "#3E3E40" : "#E6E6E6"
 
         Rectangle {
             id: loopIndicator
@@ -48,7 +48,7 @@ Slider {
         Rectangle {
             width: visualPosition * parent.width
             height: parent.height
-            color: FishUI.Theme.highlightColor
+            color: MatsyaUI.Theme.highlightColor
         }
 
         ToolTip {
@@ -120,10 +120,10 @@ Slider {
             ShapePath {
                 id: shape
                 strokeWidth: 1
-                strokeColor: FishUI.Theme.textColor
+                strokeColor: MatsyaUI.Theme.textColor
                 startX: chapterMarkerShape.position
                 startY: root.height
-                fillColor: FishUI.Theme.textColor
+                fillColor: MatsyaUI.Theme.textColor
                 PathLine { x: shape.startX; y: -1 }
                 PathLine { x: shape.startX + 6; y: -7 }
                 PathLine { x: shape.startX - 7; y: -7 }
