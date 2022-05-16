@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+0c1631ef39a9e31d7931775345b7270e ../translations/en_US.ts
+1f32d18cb82f3fddba496be033a81ac8 ../translations/zh_CN.ts
+62be69cf49629346b6eec25de26d5290 CMakeFiles/cutefish-videoplayer_autogen
+1c265c203559c0af5669ccb615f54ee3 CMakeFiles/translations
+ac3562f3df77e5100f34a1f65e66cb60 cutefish-videoplayer_autogen/EWIEGA46WW/qrc_qml.cpp
+299b7deecf020c95ea58a78005376d32 en_US.qm
+a5b30ad0c315787495c28a8358a81d3e screensaverdbusinterface.cpp
+09723fdd6adf44e6565d32e8d6a1e88f screensaverdbusinterface.moc
+3e2bf63f7d442bada5d530f2de2e869d zh_CN.qm

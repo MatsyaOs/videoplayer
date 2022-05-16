@@ -1,0 +1,5 @@
+-I/home/tokyo/clone/cuteclone/videoplayer
+-I/home/tokyo/clone/cuteclone/videoplayer/build
+-o
+/home/tokyo/clone/cuteclone/videoplayer/build/screensaverdbusinterface.moc
+/home/tokyo/clone/cuteclone/videoplayer/build/screensaverdbusinterface.h
