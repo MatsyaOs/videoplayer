@@ -1,4 +1,0 @@
-/usr/bin/matsya-videoplayer
-/usr/share/applications/matsya-videoplayer.desktop
-/usr/share/matsya-videoplayer/translations/en_US.qm
-/usr/share/matsya-videoplayer/translations/zh_CN.qm

@@ -1,9 +1,0 @@
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/install/strip.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/install/local.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/edit_cache.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/translations.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/install.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/list_install_components.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/rebuild_cache.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/matsya-videoplayer.dir
-/home/tokyo/Documents/GitHub/videoplayer/build/CMakeFiles/matsya-videoplayer_autogen.dir
